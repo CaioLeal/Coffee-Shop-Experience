@@ -1,0 +1,21 @@
+/* ##################### COCA-COLA THEME VARIABLES ##################### */
+:root {
+    --color-neutral-0: #ffffff; /* Branco */
+    --color-neutral-1: #f4f4f4; /* Cinza bem clarinho para o fundo */
+    --color-neutral-8: #1a1a1a; /* Quase preto para textos */
+    --color-neutral-9: #000000;
+
+    /* O Vermelho icônico da Coca-Cola */
+    --color-primary-1: #f40009; 
+    --color-primary-2: #df0008;
+    --color-primary-3: #bf0007;
+
+    --color-secondary-1: #000000; /* Usando preto como cor secundária */
+}
+
+/* ##################### Para testar essa variavel de cores da Coca-Cola altere os imports do styles.css ##################### */
+
+/* No seu styles.css */
+@import url('../css/variables-coke.css'); /* Troque variables.css por este */
+@import url('../css/navbar.css');
+/* ... restante dos imports */
