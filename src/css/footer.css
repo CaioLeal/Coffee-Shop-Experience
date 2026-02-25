@@ -1,0 +1,54 @@
+.footer {
+    padding: 0; /* Remove qualquer espaço externo do footer */
+    margin: 0;
+    background-color: var(--color-neutral-1); /* Fundo na cor da pagina para ele aparecer nas bordas */
+}
+
+.footer-container {
+    background-color: var(--color-primary-1);
+    background-image: url(../images/about/bg-about.png); /* Usando o mesmo fundo do About */
+    background-size: 400px; 
+    background-repeat: repeat;
+    image-rendering: auto;
+    color: var(--color-neutral-0);
+    
+    padding: 30px;
+    border-radius: 32px 32px 0 0; /* Arredondado igual ao About e News */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, .3);
+
+    display: flex;
+    justify-content: space-between; /* Espalha os itens para os cantos */
+    align-items: center;
+    flex-wrap: wrap; /* Para não quebrar no celular */
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px; /* Garante que as colunas não fiquem muito espremidas */
+    text-align: left;
+}
+
+.footer-column h4 {
+    color: var(--color-secondary-1);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    text-align: right; /* Alinha o GitHub para a direita no Desktop */
+}
+
+.footer-social a {
+    color: var(--color-neutral-0);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: var(--color-secondary-1);
+}

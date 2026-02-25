@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('../css/variables.css'); /* Importando variaveis de cor */
+@import url('../css/navbar.css'); /* Importando navbar*/
+@import url('../css/home.css'); /* Importando home*/
+@import url('../css/trending.css'); /* Importando trending*/
+@import url('../css/about.css'); /* Importando About*/
+@import url('../css/news.css'); /* Importando News*/
+@import url('../css/footer.css'); /* Importando Footer*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+#container {
+    background-image: url('../images/background-mobile.png');
+    background-repeat: no-repeat; /* Impede que a imagem fique se repetindo */
+    background-size: cover;      /* Faz a imagem cobrir toda a área disponível */
+    background-position: center;  /* Centraliza o fundo */
+    /* background-attachment: fixed;  Opcional: mantém o fundo parado ao rolar */
+    margin-bottom: 0;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--color-neutral-8);
+    font-weight: 700;
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 4px;
+        background-color: var(--color-primary-1);
+        position: absolute;
+        border-radius: 30px;
+    }
+}
+
+a.btn {
+    text-decoration: none; /* Removendo o traçado embaixo */
+}
+
+.btn {
+    padding: 10px 20px; /*Definindo tamanho do botão */
+    border: none; /*Retirando as bordas do botão */
+    border-radius: 8px; /*Arrendondando os cantos */
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600; /*Deixando font mais escura*/
+    background-color: transparent; /*Deixando botão transparente*/
+    transition: background-color .3s ease;
+}
+
+.btn-mobile {
+    font-size: 1.5rem;
+}
+
+.btn-default {
+    background-color: var(--color-primary-1);
+    color: var(--color-neutral-0);
+
+    &:hover {
+        background-color: var(--color-primary-2);
+    }
+}
+
+.btn-outlined {
+    background-color: transparent;
+    color: var(--color-primary-1);
+    border: 2px solid var(--color-primary-1);
+
+    &:hover {
+        background-color: var(--color-primary-1);
+        color: var(--color-neutral-0);
+        transition: background-color .9s ease;
+    }
+}
+
+@media (min-width: 768px) {
+    #container {
+        /* Se tiver uma imagem desktop, troque o caminho aqui */
+        background-image: url('../images/background-desktop.png'); 
+        background-size: cover;
+        background-position: start;
+        background-repeat: no-repeat;
+    }
+
+    #trending {
+        .trending-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+    }
+
+    #news {
+        min-height: 100vh;
+        gap: 8rem;
+
+        .products-cards {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+
+            .product-card {
+                img {
+                    width: 250px;
+                }
+            }
+        }
+    }
+
+    .footer-container {  
+        text-align: center;
+        padding: 20px;
+    }
+
+    .footer-column {
+        min-width: unset;
+        text-align: center; /* Centraliza tudo no mobile */
+    }
+    .footer-social {
+        order: -1; /* Isso joga o bloco do GitHub para o topo de todos no mobile */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza o ícone e o texto */
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #about {
+        margin: 4%;
+        justify-content: center;
+
+        .about-content {
+            flex-direction: row;
+            align-items: center;
+            gap: 48px;
+        }
+        /* Definindo a ordem de cada item*/
+        .about-image {
+            order: 1;
+        }
+
+        .about-info:first-child {
+            order: 2;
+        }
+
+        .about-info:last-child {
+            order: 3;
+        }
+
+    }
+}
