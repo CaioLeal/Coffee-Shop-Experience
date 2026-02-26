@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="487" height="97" alt="banner-readme" src="https://github.com/user-attachments/assets/f53934e2-2940-4268-9c1f-8e41aeee4fc9" />
+  <img width="487" height="97" alt="Starbuks logo" src="https://github.com/user-attachments/assets/7fe8fb9c-2ea1-4d26-a3bc-3ce5429d3389" />
 </div>
 
 ---
